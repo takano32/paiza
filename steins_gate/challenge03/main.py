@@ -4,8 +4,8 @@ import math
 
 n = m = l = 0
 
-ds = []
-ps = []
+dss = []
+pss = []
 first = True
 
 i = 0
@@ -19,9 +19,20 @@ for line in sys.stdin:
         l = int(l)
         continue
     if i < n:
-        d = line.rstrip()
-        ds.append(d)
+        ds = line.rstrip()
+        ds = ds.split(' ')
+        dss.append(ds)
     else:
-        p = line.rstrip()
-        ps.append(p)
+        ps = line.rstrip()
+        ps = ps.split(' ')
+        pss.append(ps)
+
+
+print('N: ', n)
+print('M: ', m)
+print('L: ', l)
+
+for ds in dss:
+    for d in ds:
+        print('d(i, j): ', d)
 
