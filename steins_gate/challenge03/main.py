@@ -10,7 +10,6 @@ first = True
 
 i = 0
 for line in sys.stdin:
-    i += 1
     if first:
         first = False
         [n, m, l] = line.rstrip().split(' ')
@@ -18,6 +17,7 @@ for line in sys.stdin:
         m = int(m)
         l = int(l)
         continue
+    i += 1        
     if i < n:
         ds = line.rstrip()
         ds = ds.split(' ')
